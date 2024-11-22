@@ -7,6 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<4.0"
+pandas = "^2.2.3"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -14,6 +15,7 @@ ipython = "^8.29.0"
 pre-commit = "^4.0.1"
 mypy = "^1.13.0"
 pylint = "^3.3.1"
+pandas-stubs = "^2.2.3.241009"
 
 [build-system]
 requires = ["poetry-core"]
