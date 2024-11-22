@@ -62,7 +62,7 @@ def sbatch(
 
 def sinfo() -> pd.DataFrame:
     cproc = subprocess.run("sinfo", capture_output=True, check=True)
-    return pd.read_csv(io.StringIO(cproc.stdout.decode("utf-8")), sep="\s+")
+    return pd.read_csv(io.StringIO(cproc.stdout.decode("utf-8")), sep=r"\s+")
 
 
 def timelimit(partition: str) -> str:

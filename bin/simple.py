@@ -7,8 +7,11 @@ from src.core.context import Context
 
 
 def main(ctx: Context) -> None:
-    ctx.parser.add_argument("--foo", action="store_true")
     args = ctx.parser.parse_args()
+    gpt = GPTAgent(
+        "gpt-4o-mini", system_prompt="Answer everything incorrectly", temperature=0
+    )
+    ctx.log.info(gpt.generate("What is the capital of Burkina Faso?"))
 
 
 if __name__ == "__main__":
